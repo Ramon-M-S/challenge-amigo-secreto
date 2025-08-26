@@ -26,3 +26,16 @@ function atualizarlista(){
         lista.appendChild(amigo);
     }
 }
+
+function sortearAmigo(){
+    if(amigos == 0){
+        alert("Nenhum amigo adicionado para sortear");
+        return;
+    }
+
+    let resultado = document.getElementById("resultado");
+    let indiceSorteado = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceSorteado];
+    
+    resultado.innerHTML = `<li>Amigo sorteado: <strong>${amigoSorteado}</strong></li>`;
+}
